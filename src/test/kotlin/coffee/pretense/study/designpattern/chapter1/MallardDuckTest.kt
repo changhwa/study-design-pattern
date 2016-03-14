@@ -24,4 +24,9 @@ class MallardDuckTest() {
         assertEquals("Quack", mallardDuck.quack())
     }
 
+    @Test
+    fun test_mallard_duck_fly() {
+        assertEquals("Fly", mallardDuck.fly())
+    }
+
 }

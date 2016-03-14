@@ -22,4 +22,9 @@ class RedheadDuckTest {
     fun test_redhead_duck_quack() {
         assertEquals("Quack", redheadDuck.quack())
     }
+
+    @Test
+    fun test_redhead_duck_fly() {
+        assertEquals("Fly", redheadDuck.fly())
+    }
 }
