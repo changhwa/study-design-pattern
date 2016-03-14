@@ -1,6 +1,6 @@
 package coffee.pretense.study.designpattern.chapter1
 
-class RubberDuck: Duck() {
+class RubberDuck: Duck(), Quackable {
 
     override fun display(): String {
         return "RubberDuck"
@@ -8,9 +8,5 @@ class RubberDuck: Duck() {
 
     override fun quack(): String {
         return "Ppick"
-    }
-
-    override fun fly(): String {
-        return "Not Fly"
     }
 }

@@ -21,9 +21,4 @@ class RubberDuckTest() {
     fun test_redhead_duck_quack() {
         assertEquals("Ppick", rubberDuck.quack())
     }
-
-    @Test
-    fun test_redhead_duck_fly() {
-        assertEquals("Not Fly", rubberDuck.fly())
-    }
 }
