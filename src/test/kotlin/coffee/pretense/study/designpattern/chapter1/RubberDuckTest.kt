@@ -1,11 +1,19 @@
 package coffee.pretense.study.designpattern.chapter1
 
+import org.junit.Before
 import org.junit.Test
 import kotlin.test.assertEquals
 
 class RubberDuckTest() {
 
-    var rubberDuck = RubberDuck()
+    lateinit var quackAction: QuackAction
+    lateinit var rubberDuck: RubberDuck
+
+    @Before
+    fun init() {
+        quackAction = PickQuack()
+        rubberDuck = RubberDuck(quackAction)
+    }
 
     @Test
     fun test_redhead_duck_display() {

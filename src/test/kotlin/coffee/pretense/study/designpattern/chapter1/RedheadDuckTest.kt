@@ -3,10 +3,20 @@ package coffee.pretense.study.designpattern.chapter1
 import org.junit.Test
 
 import org.junit.Assert.*
+import org.junit.Before
 
 class RedheadDuckTest {
 
-    var redheadDuck = RedheadDuck()
+    lateinit var flyWithWings: FlyAction
+    lateinit var simpleQuack: QuackAction
+    lateinit var redheadDuck: RedheadDuck
+
+    @Before
+    fun init() {
+        flyWithWings = FlyWithWings()
+        simpleQuack = SimpleQuack()
+        redheadDuck = RedheadDuck(flyWithWings, simpleQuack)
+    }
 
     @Test
     fun test_redhead_duck_display() {

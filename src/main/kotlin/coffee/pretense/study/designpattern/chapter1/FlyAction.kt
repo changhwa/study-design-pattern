@@ -1,7 +1,6 @@
 package coffee.pretense.study.designpattern.chapter1
 
-interface Quackable {
+interface FlyAction {
 
-    fun quack(): String
-
+    fun fly(): String
 }

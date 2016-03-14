@@ -7,7 +7,16 @@ import org.junit.Before
 
 class MallardDuckTest() {
 
-    var mallardDuck: MallardDuck = MallardDuck()
+    lateinit var flyWithWings: FlyAction
+    lateinit var simpleQuack: QuackAction
+    lateinit var mallardDuck: MallardDuck
+
+    @Before
+    fun init(){
+        flyWithWings = FlyWithWings()
+        simpleQuack = SimpleQuack()
+        mallardDuck = MallardDuck(flyWithWings, simpleQuack)
+    }
 
     @Test
     fun test_mallard_duck_display() {

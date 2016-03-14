@@ -1,13 +1,13 @@
 package coffee.pretense.study.designpattern.chapter1
 
-class MallardDuck: Duck(), Flyable, Quackable {
+class MallardDuck(var flyAction: FlyAction, var quack: QuackAction) : Duck(){
 
-    override fun quack(): String {
-        return "Quack"
+    fun quack(): String {
+        return quack.quack()
     }
 
-    override fun fly(): String {
-        return "Fly"
+    fun fly(): String {
+        return flyAction.fly()
     }
 
     override fun display(): String {
