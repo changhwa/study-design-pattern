@@ -7,7 +7,7 @@ import kotlin.test.assertEquals
 class RubberDuckTest() {
 
     lateinit var quackAction: QuackAction
-    lateinit var rubberDuck: RubberDuck
+    lateinit var rubberDuck: Duck
 
     @Before
     fun init() {

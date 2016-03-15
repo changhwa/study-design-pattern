@@ -9,7 +9,7 @@ class MallardDuckTest() {
 
     lateinit var flyWithWings: FlyAction
     lateinit var simpleQuack: QuackAction
-    lateinit var mallardDuck: MallardDuck
+    lateinit var mallardDuck: Duck
 
     @Before
     fun init(){
