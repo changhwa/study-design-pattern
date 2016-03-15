@@ -1,6 +1,12 @@
 package coffee.pretense.study.designpattern.chapter1
 
-class RubberDuck(var quack: QuackAction): Duck(){
+class RubberDuck: Duck(){
+
+    lateinit var quack: QuackAction
+
+    fun setQuackAction(quack: QuackAction){
+        this.quack = quack
+    }
 
     override fun display(): String {
         return "RubberDuck"

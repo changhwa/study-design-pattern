@@ -12,7 +12,8 @@ class RubberDuckTest() {
     @Before
     fun init() {
         quackAction = PickQuack()
-        rubberDuck = RubberDuck(quackAction)
+        rubberDuck = RubberDuck()
+        rubberDuck.setQuackAction(quackAction)
     }
 
     @Test

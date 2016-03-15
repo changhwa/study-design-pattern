@@ -15,7 +15,9 @@ class RedheadDuckTest {
     fun init() {
         flyWithWings = FlyWithWings()
         simpleQuack = SimpleQuack()
-        redheadDuck = RedheadDuck(flyWithWings, simpleQuack)
+        redheadDuck = RedheadDuck()
+        redheadDuck.setFlyAction(flyWithWings)
+        redheadDuck.setQuackAction(simpleQuack)
     }
 
     @Test

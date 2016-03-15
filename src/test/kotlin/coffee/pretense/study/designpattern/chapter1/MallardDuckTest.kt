@@ -15,7 +15,9 @@ class MallardDuckTest() {
     fun init(){
         flyWithWings = FlyWithWings()
         simpleQuack = SimpleQuack()
-        mallardDuck = MallardDuck(flyWithWings, simpleQuack)
+        mallardDuck = MallardDuck()
+        mallardDuck.setFlyAction(flyWithWings)
+        mallardDuck.setQuackAction(simpleQuack)
     }
 
     @Test
@@ -38,4 +40,10 @@ class MallardDuckTest() {
         assertEquals("Fly", mallardDuck.fly())
     }
 
+    @Test
+    fun test_mallard_duck_quack_change() {
+        var pickQuack: QuackAction = PickQuack()
+        mallardDuck.setQuackAction(pickQuack)
+        assertEquals("Ppick", mallardDuck.quack())
+    }
 }
