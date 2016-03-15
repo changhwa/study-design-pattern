@@ -1,5 +1,9 @@
 package coffee.pretense.study.designpattern.chapter1
 
+import coffee.pretense.study.designpattern.chapter1.action.FlyAction
+import coffee.pretense.study.designpattern.chapter1.action.FlyWithWings
+import coffee.pretense.study.designpattern.chapter1.action.QuackAction
+import coffee.pretense.study.designpattern.chapter1.action.SimpleQuack
 import org.junit.Test
 
 import org.junit.Assert.*

@@ -1,5 +1,8 @@
 package coffee.pretense.study.designpattern.chapter1
 
+import coffee.pretense.study.designpattern.chapter1.action.FlyAction
+import coffee.pretense.study.designpattern.chapter1.action.QuackAction
+
 
 abstract class Duck {
 
@@ -14,17 +17,11 @@ abstract class Duck {
         this.quack = quack
     }
 
-    fun swim(): String {
-        return "Swim"
-    }
+    fun swim(): String = "Swim"
 
-    fun fly():String {
-        return fly.fly()
-    }
+    fun fly():String = fly.fly()
 
-    fun quack():String {
-        return quack.quack()
-    }
+    fun quack():String = quack.quack()
 
     abstract fun display(): String //직접구현
 }

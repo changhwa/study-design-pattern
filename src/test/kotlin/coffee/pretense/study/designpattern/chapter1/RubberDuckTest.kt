@@ -1,5 +1,7 @@
 package coffee.pretense.study.designpattern.chapter1
 
+import coffee.pretense.study.designpattern.chapter1.action.PickQuack
+import coffee.pretense.study.designpattern.chapter1.action.QuackAction
 import org.junit.Before
 import org.junit.Test
 import kotlin.test.assertEquals
