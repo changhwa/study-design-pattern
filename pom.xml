@@ -11,9 +11,18 @@
     <properties>
         <kotlin.version>1.0.0</kotlin.version>
         <junit.version>4.12</junit.version>
+        <mockito.version>1.10.19</mockito.version>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
+    <repositories>
+        <repository>
+            <id>jcenter</id>
+            <name>jcenter</name>
+            <url>http://jcenter.bintray.com</url>
+        </repository>
+    </repositories>
 
     <dependencies>
 
@@ -29,6 +38,14 @@
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>com.nhaarman</groupId>
+            <artifactId>mockito-kotlin</artifactId>
+            <version>0.3.0</version>
+            <scope>test</scope>
+        </dependency>
+
 
         <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
