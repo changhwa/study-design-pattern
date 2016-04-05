@@ -2,6 +2,7 @@ package coffee.pretense.study.designpattern.chapter2;
 
 import org.junit.Before;
 import org.junit.Test;
+import coffee.pretense.study.designpattern.chapter2.additive.BananaAdditive;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
@@ -55,9 +56,10 @@ public class CoffeeTest {
     @Test
     public void test_order_cafe_mocha_and_mocha_and_banana_and_whip(){
         cafeMocha.setMocha(true);
-        cafeMocha.setBanana(true);
         cafeMocha.setWhip(true);
-        assertThat(cafeMocha.getMenuName(), is("CafeMocha"));
+        cafeMocha = new BananaAdditive(cafeMocha);
+
+        assertThat(cafeMocha.getMenuName(), is("CafeMocha+banana"));
         assertThat(cafeMocha.cost(), is(7500));
     }
 }

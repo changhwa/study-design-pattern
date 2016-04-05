@@ -6,14 +6,12 @@ public abstract class Coffee {
     private final Integer whipCost = 1000;
     private final Integer icecreamCost = 2000;
     private final Integer conPannaCost = 1000;
-    private final Integer bananaCost = 1000;
 
 
     private Boolean mocha = false;
     private Boolean whip = false;
     private Boolean icecream = false;
     private Boolean conPanna = false;
-    private Boolean banana = false;
 
 
     public abstract String getMenuName();
@@ -37,9 +35,6 @@ public abstract class Coffee {
             cost += conPannaCost;
         }
 
-        if(hasBanana()){
-            cost += bananaCost;
-        }
 
         return cost;
     }
@@ -60,10 +55,6 @@ public abstract class Coffee {
         this.conPanna = conPanna;
     }
 
-    public void setBanana(Boolean banana){
-        this.banana = banana;
-    }
-
     private Boolean hasMocha(){
         return mocha;
     }
@@ -78,9 +69,5 @@ public abstract class Coffee {
 
     private Boolean hasConPanna(){
         return conPanna;
-    }
-
-    private Boolean hasBanana(){
-        return banana;
     }
 }
